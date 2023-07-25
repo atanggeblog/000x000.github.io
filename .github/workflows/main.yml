@@ -21,7 +21,7 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: 0x00.icp
+      - name: Deploy to Juno
         uses: buildwithjuno/000x000@main
         with:
           args: deploy
