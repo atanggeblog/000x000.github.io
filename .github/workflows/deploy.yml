@@ -11,7 +11,7 @@ jobs:
       - name: Check out the repo
         uses: actions/checkout@v3
 
-      - uses: atanggeblog/000x000.github.io
+      - uses: actions/setup-node@v3
         with:
           node-version: "18"
 
