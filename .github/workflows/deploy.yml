@@ -6,20 +6,19 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
     runs:
     using: 'node20'
     pre: 'setup.js'
     main: 'index.js'
     post: 'cleanup.js'
-   
+    
     steps:
       - name: Check out the repo
         uses: actions/checkout@v3
 
       - uses: actions/setup-node@v3
         with:
-          node-version: "20"
+          node-version: "18"
 
       - name: Install Dependencies
         run: npm ci
