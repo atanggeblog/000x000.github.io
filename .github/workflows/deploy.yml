@@ -6,12 +6,7 @@ on:
 
 jobs:
   build:
-    runs:
-    using: 'node20'
-    pre: 'setup.js'
-    main: 'index.js'
-    post: 'cleanup.js'
-    
+    runs-on: ubuntu-latest
     steps:
       - name: Check out the repo
         uses: actions/checkout@v3
