@@ -1,8 +1,8 @@
 name: Deploy to Juno
 
 on:
-  release:
-    types: [released]
+  push:
+    branches: [main]
 
 jobs:
   build:
@@ -22,7 +22,7 @@ jobs:
         run: npm run build
 
       - name: Deploy to Juno
-        uses: buildwithjun/000x0000.github.io@main
+        uses: junobuild/juno-action@main
         with:
           args: deploy
         env:
